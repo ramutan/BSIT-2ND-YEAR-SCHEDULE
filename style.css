@@ -1,0 +1,164 @@
+/* ==========================================================================
+   1. VS Code Dark Theme Setup
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Consolas, "Courier New", Menlo, Monaco, monospace;
+    color: #cccccc; /* VS Code default text */
+    background-color: #1e1e1e; /* Editor Background */
+    line-height: 1.6;
+    padding: 0 0 40px 0;
+}
+
+/* ==========================================================================
+   2. Activity Bar / Navigation
+   ========================================================================== */
+.schedule {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #252526; /* Activity/Side Bar Background */
+    border-bottom: 1px solid #3c3c3c;
+    margin-bottom: 40px;
+}
+
+.schedule li a {
+    display: block;
+    color: #858585;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.schedule li a:hover {
+    color: #ffffff;
+    background-color: #2d2d2d;
+}
+
+.schedule li.active a {
+    color: #ffffff;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #007acc; /* VS Code Blue Accent */
+}
+
+/* ==========================================================================
+   3. Header & Profile (Syntax Colored)
+   ========================================================================== */
+h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #4fc1ff; /* Variable/Function Light Blue */
+    margin-bottom: 6px;
+}
+
+/* Simulating a comment line for the university info */
+p {
+    font-size: 0.95rem;
+    color: #6a9955; /* VS Code Green Comments */
+    margin-bottom: 40px;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #3c3c3c;
+    background-color: #252526;
+}
+
+/* ==========================================================================
+   4. Editor Grid / Table Layout
+   ========================================================================== */
+h2 {
+    max-width: 1100px;
+    margin: 0 auto 15px auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #dcdcaa; /* Function Yellow */
+}
+
+h2::before {
+    content: "function ";
+    color: #569cd6; /* Keyword Blue */
+}
+
+h2::after {
+    content: "() {";
+    color: #ffd700; /* Bracket Gold */
+}
+
+table {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #252526; 
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #3c3c3c !important; /* Panel border */
+}
+
+th, td {
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+th {
+    background-color: #2d2d2d; /* Header Row */
+    color: #569cd6; /* Keyword Blue */
+    font-weight: normal;
+    border-bottom: 2px solid #3c3c3c;
+}
+
+tr {
+    border-bottom: 1px solid #2d2d2d;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #2a2d2e; /* Editor Line Highlight */
+}
+
+/* Day Name styling */
+td strong {
+    color: #ce9178; /* String Orange/Brown */
+    font-weight: normal;
+}
+
+/* Subject styling */
+td:nth-child(2) {
+    color: #9cdcfe; /* Variables Light Blue */
+}
+
+/* Subject Lab/Lec tags if you wrap them or let italics handle it */
+td em {
+    color: #b5cea8; /* Number/Literal green-tint */
+    font-style: normal;
+}
+
+/* Time styling */
+td:nth-child(3) {
+    color: #b5cea8; /* Constants/Numbers light green */
+}
+
+/* Mode styling (e.g., Face-to-Face vs Online) */
+td:nth-child(4) {
+    color: #c586c0; /* Control Keyword Purple */
+}
+
+/* Room styling */
+td:nth-child(5) {
+    color: #64b5f6;
+}
